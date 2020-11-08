@@ -7,13 +7,13 @@ Qu, Yu, Ting Liu, Jianlei Chi, Yangxu Jin, Di Cui, Ancheng He, and Qinghua Zheng
 
 ### Generating Class Dependency Network
 ---
-In each subdirectory, we have already included the corresponding Class Dependency Network (CDN) (classgraph.dot). If you want to generate your own CDN, you can use the [Understand Perl Script](https://www.scitools.com/documents/manuals/pdf/understand_api.pdf) file, Class-Graph.pl, after installing the Understand tool, using the commend:
+In each subdirectory, we have already included the corresponding Class Dependency Network (CDN) (classgraph.dot). If you want to generate your own CDN, you can use the [Understand Perl Script](https://www.scitools.com/documents/manuals/pdf/understand_api.pdf) file -- Class-Graph.pl, after installing the Understand tool, by using the commend:
 ```bash
 uperl Class-Graph.pl %YourOwnProjectDirectory%
 ```
 ### Generating the input file for network embedding algorithms
 ---
-After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms. After executing Driver.py, we can get the "edgelist" file in each directory. Then, for instance, we can use the [ProNE](https://github.com/THUDM/ProNE) implementation:
+After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms. After executing Driver.py, we can get the "edgelist" file in each directory. Then, for instance, we can use the [ProNE](https://github.com/THUDM/ProNE) implementation to generate the embedding file:
 ```bash
 python proNE.py -graph edgelist -emb1 classgraph.emd -emb2 classgraph-2.emd -dimension 32 -step 10 -theta 0.5 -mu 0.2
 ```
