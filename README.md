@@ -13,7 +13,7 @@ uperl Class-Graph.pl %YourOwnProjectDirectory%
 ```
 ### Generating the input file for network embedding algorithms
 ---
-After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms. After executing Driver.py, we can get the "edgelist" file in each directory. Then, for instance, we can use the [ProNE](https://github.com/THUDM/ProNE) implementation to generate the embedding file:
+After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms. After executing Driver.py, we can get the "edgelist" file in each directory. Then, for instance, we can use the [ProNE](https://github.com/THUDM/ProNE) implementation to generate the embedding file (classgraph.emd):
 ```bash
 python proNE.py -graph edgelist -emb1 classgraph.emd -emb2 classgraph-2.emd -dimension 32 -step 10 -theta 0.5 -mu 0.2
 ```
