@@ -7,7 +7,7 @@ Qu, Yu, Ting Liu, Jianlei Chi, Yangxu Jin, Di Cui, Ancheng He, and Qinghua Zheng
 
 ### Generating Class Dependency Network
 ---
-In each subdirectory, we have already included the corresponding class dependency network (classgraph.dot). If you want to generate your own CDN, you can use the [Understand Perl Script](https://www.scitools.com/documents/manuals/pdf/understand_api.pdf) after installing the Understand tool, using the commend:
+In each subdirectory, we have already included the corresponding Class Dependency Network (CDN) (classgraph.dot). If you want to generate your own CDN, you can use the [Understand Perl Script](https://www.scitools.com/documents/manuals/pdf/understand_api.pdf) file, Class-Graph.pl, after installing the Understand tool, using the commend:
 ```bash
 uperl Class-Graph.pl %YourOwnProjectDirectory%
 ```
@@ -24,9 +24,7 @@ After generating the classgraph.emd file, we can run the experiment by executing
 python Node2Defect-Final-CrossValidation.py
 ```
 The overall results are listed in the files in the files like "All-Popt-%s-%s-%s.csv"
-
-
-Requirements:  
+### Requirements:  
 python==2.7  
 scipy==1.1.0  
 networkx==1.7  
