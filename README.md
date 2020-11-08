@@ -27,7 +27,7 @@ After generating the classgraph.emd file, we can run the experiment by executing
 ```bash
 python Node2Defect-Final-CrossValidation.py
 ```
-The overall results are listed in the files in the files like "All-Popt-%s-%s-%s.csv"
+The overall results are listed in the files like "All-Popt-%s-%s-%s.csv"
 ### Requirements:  
 python==3.7  
 scipy==1.5.2  
