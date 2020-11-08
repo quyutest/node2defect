@@ -33,6 +33,7 @@ numpy==1.19.1
 pandas==1.1.2
 
 We have used the following implementations of different network embedding algorithms, please refer to their repos for their dependencies:
+
 [OpenNE](https://github.com/thunlp/OpenNE)  
 [ProNE](https://github.com/THUDM/ProNE)  
 [Walklets](https://github.com/benedekrozemberczki/walklets)  
