@@ -7,6 +7,10 @@ Qu, Yu, Ting Liu, Jianlei Chi, Yangxu Jin, Di Cui, Ancheng He, and Qinghua Zheng
 
 ### Generating Class Dependency Graph
 
+```bash
+uperl Class-Graph.pl %YourOwnProjectDirectory%
+```
+
 Requirements:  
 python==2.7  
 scipy==1.1.0  
