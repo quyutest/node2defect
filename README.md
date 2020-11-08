@@ -7,7 +7,7 @@ Qu, Yu, Ting Liu, Jianlei Chi, Yangxu Jin, Di Cui, Ancheng He, and Qinghua Zheng
 
 ### Generating Class Dependency Graph
 
-In each subdirectory, we have already included the corresponding class dependency network (classgraph.dot). If you want to generate your own CDN, you can use the Understand Perl Script after installing the Understand tool, using the commend:
+In each subdirectory, we have already included the corresponding class dependency network (classgraph.dot). If you want to generate your own CDN, you can use the [Understand Perl Script](https://www.scitools.com/documents/manuals/pdf/understand_api.pdf) after installing the Understand tool, using the commend:
 ```bash
 uperl Class-Graph.pl %YourOwnProjectDirectory%
 ```
