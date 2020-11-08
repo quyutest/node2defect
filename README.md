@@ -13,7 +13,8 @@ uperl Class-Graph.pl %YourOwnProjectDirectory%
 ```
 ### Generating the input file for network embedding algorithms
 
-After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms
+After generating the CDN, we can use the Driver.py to generate the input file for network embedding algorithms. After executing Driver.py, we can generate the "edgelist" file in each directory. For instance, we can use the [ProNE](https://github.com/THUDM/ProNE) implementation:
+
 
 
 Requirements:  
