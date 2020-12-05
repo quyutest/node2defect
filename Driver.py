@@ -14,7 +14,7 @@ def static_analysis():
     each_lines= findFile.readlines()
     for each_line in each_lines:
         if each_line.__contains__('>'):
-            edge=each_line.split('>');
+            edge=each_line.split('>')
             edge[0]=edge[0][edge[0].index('\"')+1:edge[0].rindex('\"')]
             edge[1]=edge[1][edge[1].index('\"')+1:edge[1].rindex('\"')]
             if(G.has_edge(edge[0],edge[1])==False):
