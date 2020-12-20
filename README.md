@@ -1,5 +1,5 @@
 # node2defect
-Supplementary code and data of the paper *Evaluating network embedding techniques in software bug prediction*.
+Supplementary code and data of the paper *Evaluating network embedding techniques' performances in software bug prediction*.
 
 This repo can also be used as a complementary material for our previous paper:
 
