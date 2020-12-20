@@ -1,0 +1,10 @@
+Ant,ant-1.7-smell-result.csv,File-Graph-ant-1.7.dot
+Camel,camel-1.6-smell-result.csv,File-Graph-camel-1.6.dot
+Ivy,ivy-2.0-smell-result.csv,File-Graph-ivy-2.0.dot
+jEdit,jedit-4.1-smell-result.csv,File-Graph-jedit-4.1.dot
+Lucene,lucene-2.4-smell-result.csv,File-Graph-lucene-2.4.dot
+Poi,poi-3.0-smell-result.csv,File-Graph-poi-3.0.dot
+Synapse,synapse-1.2-smell-result.csv,File-Graph-synapse-1.2.dot
+Tomcat,tomcat-smell-result.csv,File-Graph-tomcat.dot
+Velocity,velocity-1.6-smell-result.csv,File-Graph-velocity-1.6.dot
+Xalan,xalan-2.6-smell-result.csv,File-Graph-xalan-2.6.dot
