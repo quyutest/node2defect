@@ -113,9 +113,32 @@ def classifier_output(classifier_name,data_train,label_train,data_test,label_tes
             return predprob_auc,predprob,precision,recall,fmeasure,auc,mcc
         if(grid_sear==True):
             print("Start Grid Search")
+            
+            parameters = {
+                        'max_depth': [80, 90, 100, 110],
+                        'max_features': [2, 3],
+                        'min_samples_leaf': [3, 4, 5],
+                        'min_samples_split': [8, 10, 12],
+                        'n_estimators': [100, 200, 300, 1000]
+                        }
+            
+            # parameters = {
+            # 'max_depth': [20, 40, 80, 100],
+            # 'max_features': [3, 5, 7, 10],
+            # 'min_samples_split': [8, 10],
+            # 'n_estimators': [200, 400, 600, 1000, 2000]}
+
+            # parameters = {
+            # 'max_depth': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, None],
+            # 'max_features': [2, 3],
+            # 'min_samples_leaf': [3, 4, 5],
+            # 'min_samples_split': [8, 10, 12],
+            # 'n_estimators': [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000]}
+            
 #             parameters = {'n_estimators':range(10,71,10), 'max_depth':range(3,14,2), 'min_samples_split':range(50,201,20), 'min_samples_leaf':range(10,60,10)}
-            parameters = {'n_estimators':range(10,71,10), 'max_depth':range(3,14,2), 'min_samples_split':range(10,201,20), 'min_samples_leaf':range(10,60,10)}
+#             parameters = {'n_estimators':range(10,71,10), 'max_depth':range(3,14,2), 'min_samples_split':range(10,201,20), 'min_samples_leaf':range(10,60,10)}
             gsearch = GridSearchCV(rf, parameters, scoring='f1', cv=3, n_jobs=14)
+            # gsearch = GridSearchCV(rf, parameters, scoring='roc_auc', cv=3, n_jobs=14)
             gsearch.fit(data_train, label_train)
             predprob=gsearch.predict(data_test)
             predprob_auc=gsearch.predict_proba(data_test)[:, 1]
