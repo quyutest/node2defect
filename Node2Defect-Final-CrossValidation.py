@@ -115,43 +115,6 @@ def run_evaluation(mode):
     this_column=data_train[:,3]
     print(info_gain.info_gain_ratio(label_train,this_column))
     
-#     min_max_scaler = preprocessing.MinMaxScaler()
-#     data_train_minmax = min_max_scaler.fit_transform(data_train)
-#     data_test_minmax = min_max_scaler.transform(data_test)
-#     
-#     data_train=data_train_minmax
-#     data_test=data_test_minmax
-    
-#     if(mode=="origin"):
-#         min_max_scaler = preprocessing.MinMaxScaler()
-#         data_train_minmax = min_max_scaler.fit_transform(data_train)
-#         data_test_minmax = min_max_scaler.transform(data_test)
-#          
-#         data_train=data_train_minmax
-#         data_test=data_test_minmax
-#          
-#     if(mode=="all"):
-#          
-#         tradi_list=[]
-#         embed_list=[]
-#         for j in range(0,20):
-#             tradi_list.append(j)
-#         for j in range(20,52):
-#             embed_list.append(j)
-#          
-#         min_max_scaler = preprocessing.MinMaxScaler()
-#         tradi_data_train=data_train[:,tradi_list]
-#         tradi_data_test=data_test[:,tradi_list]
-#          
-#         embed_data_train=data_train[:,embed_list]
-#         embed_data_test=data_test[:,embed_list]
-#          
-#         data_train_minmax_tradi = min_max_scaler.fit_transform(tradi_data_train)
-#         data_test_minmax_tradi = min_max_scaler.transform(tradi_data_test)
-#          
-#         data_train=numpy.hstack((data_train_minmax_tradi,embed_data_train))
-#         data_test=numpy.hstack((data_test_minmax_tradi,embed_data_test))
-    
     package_loc_dict={}
     package_defect_dict={}
     
@@ -403,29 +366,6 @@ def run_evaluation(mode):
     
     return P_opt_model,P_opt_effortcore,P_opt_CBS,P_opt_CBScore
 ####################################################
-def class_defect_read():
-    global Total_defect_num
-    global defect_file_num
-    Total_defect_num=0
-    class_defect_dict={}
-    class_defect_file=open(subject+'/vulnerabilities-new.csv','r')
-    previous_severity=""
-    lines=class_defect_file.readlines()
-    for index,each_line in enumerate(lines):
-        if(index!=0):
-            records=each_line.strip('\n').split(',')
-            if(records[0]==""):
-                severity=previous_severity
-            else:
-                severity=records[3]
-            file_name=records[2]
-            class_defect_bool[file_name]=1
-            if(file_name in class_defect_dict):
-                class_defect_dict[file_name]=class_defect_dict[file_name]+1
-            else:
-                class_defect_dict[file_name]=1
-    return class_defect_dict
-##########################################################
 def make_prediction(binary_text,train_index,test_index,mode):
     first_line=binary_text[0]
     out_train=open(subject+'/train.csv','w')
@@ -446,7 +386,7 @@ def make_prediction(binary_text,train_index,test_index,mode):
 
 ####################################################
 def average_value(list):
-    return float(sum(list))/len(list);
+    return float(sum(list))/len(list)
 ####################################################
 
 time_1=datetime.datetime.now()
